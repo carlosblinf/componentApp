@@ -6,14 +6,22 @@ import { InputScreen } from "../screens/inputs";
 
 import { Ionicons } from "@expo/vector-icons";
 import { SettingScreen } from "../screens/settings";
+import Animation101Screen from "../screens/animations/Animation101Screen";
+import { StatusBar } from "expo-status-bar";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 function MyStack() {
   return (
-    <Stack.Navigator initialRouteName="HomeScreen">
+    <Stack.Navigator
+      initialRouteName="HomeScreen"
+      screenOptions={{
+        headerBackTitleVisible: false,
+      }}
+    >
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen name="Animation101Screen" component={Animation101Screen} />
       <Stack.Screen name="InputScreen" component={InputScreen} />
     </Stack.Navigator>
   );
@@ -57,6 +65,7 @@ export default function Navigation() {
   return (
     <NavigationContainer>
       <MyTabs />
+      <StatusBar style="auto" />
     </NavigationContainer>
   );
 }

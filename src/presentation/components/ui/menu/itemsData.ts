@@ -1,5 +1,4 @@
-export const menuItems = [
-  // 01-animationMenuItems
+export const animationMenuItems = [
   {
     name: "Animation 101",
     icon: "cube-outline",
@@ -10,7 +9,9 @@ export const menuItems = [
     icon: "albums-outline",
     component: "Animation102Screen",
   },
-
+];
+export const menuItems = [
+  // 01-animationMenuItems
   // 02-menuItems
   {
     name: "Pull to refresh",
@@ -44,6 +45,8 @@ export const menuItems = [
   },
 
   // 03- uiMenuItems
+];
+export const uiMenuItems = [
   {
     name: "Switches",
     icon: "toggle-outline",

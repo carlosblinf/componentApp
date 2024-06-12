@@ -4,10 +4,10 @@ import { colors } from "@/config/theme/theme";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-type MenuItemProps = {
+export type MenuItemProps = {
   name: string;
   icon: string;
-  component: string;
+  component: never;
   isFirst?: boolean;
   isLast?: boolean;
 };

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "learn-rn",
-    "slug": "learn-rn",
+    "name": "componentApp",
+    "slug": "component-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

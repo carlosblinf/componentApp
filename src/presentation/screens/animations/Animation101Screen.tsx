@@ -13,10 +13,10 @@ export default function Animation101Screen() {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={stylesAnimated.container}>
       <Animated.View
         style={[
-          styles.purpleBox,
+          stylesAnimated.purpleBox,
           {
             opacity: animatedOpacity,
             transform: [
@@ -27,7 +27,7 @@ export default function Animation101Screen() {
           },
         ]}
       />
-      <View style={styles.containerButton}>
+      <View style={stylesAnimated.containerButton}>
         <AnimateButton text="FadeIn" action={() => handleFadeIn()} />
         <AnimateButton text="FadeOut" action={() => fadeOut({})} />
       </View>
@@ -35,7 +35,7 @@ export default function Animation101Screen() {
   );
 }
 
-const styles = StyleSheet.create({
+export const stylesAnimated = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",

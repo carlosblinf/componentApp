@@ -8,6 +8,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { SettingScreen } from "../screens/settings";
 import Animation101Screen from "../screens/animations/Animation101Screen";
 import { StatusBar } from "expo-status-bar";
+import Animation102Screen from "../screens/animations/Animation102Screen";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -22,6 +23,7 @@ function MyStack() {
     >
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="Animation101Screen" component={Animation101Screen} />
+      <Stack.Screen name="Animation102Screen" component={Animation102Screen} />
       <Stack.Screen name="InputScreen" component={InputScreen} />
     </Stack.Navigator>
   );

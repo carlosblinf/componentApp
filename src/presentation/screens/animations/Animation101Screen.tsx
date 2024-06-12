@@ -1,33 +1,16 @@
-import { View, StyleSheet, Alert, Animated, Easing } from "react-native";
-import React, { useRef } from "react";
+import { View, StyleSheet, Animated } from "react-native";
 import { colors } from "@/config/theme/theme";
 import AnimateButton from "@/presentation/components/ui/buttons/AnimateButton";
+import { useAnimation } from "@/presentation/hooks/useAnimation";
 
 export default function Animation101Screen() {
-  const animatedOpacity = useRef(new Animated.Value(0)).current;
-  const animatedTop = useRef(new Animated.Value(-150)).current;
+  const { fadeIn, fadeOut, animatedOpacity, animatedTop, movingFromTop } =
+    useAnimation();
 
-  const handleFadeIn = () => {
-    Animated.timing(animatedTop, {
-      toValue: 0,
-      duration: 800,
-      easing: Easing.bounce,
-      useNativeDriver: true,
-    }).start();
-
-    Animated.timing(animatedOpacity, {
-      toValue: 1,
-      duration: 500,
-      useNativeDriver: true,
-    }).start();
-  };
-  const handleFadeOut = () => {
-    Animated.timing(animatedOpacity, {
-      toValue: 0,
-      duration: 500,
-      useNativeDriver: true,
-    }).start(() => animatedTop.resetAnimation());
-  };
+  function handleFadeIn() {
+    fadeIn({});
+    movingFromTop({ initialPosition: -150, duration: 800 });
+  }
 
   return (
     <View style={styles.container}>
@@ -45,8 +28,8 @@ export default function Animation101Screen() {
         ]}
       />
       <View style={styles.containerButton}>
-        <AnimateButton text="FadeIn" action={handleFadeIn} />
-        <AnimateButton text="FadeOut" action={handleFadeOut} />
+        <AnimateButton text="FadeIn" action={() => handleFadeIn()} />
+        <AnimateButton text="FadeOut" action={() => fadeOut({})} />
       </View>
     </View>
   );

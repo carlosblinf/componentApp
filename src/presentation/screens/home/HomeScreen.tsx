@@ -7,14 +7,14 @@ import {
   menuItems,
   uiMenuItems,
 } from "@/presentation/components/ui/menu/itemsData";
-import CustomView from "@/presentation/components/ui/CustomView";
+import ContainerView from "@/presentation/components/ui/ContainerView";
 import RenderMenu from "@/presentation/components/ui/menu/RenderMenu";
 
 const Separator = () => <View style={{ marginTop: 30 }} />;
 
 export default function HomeScreen() {
   return (
-    <CustomView withMargin>
+    <ContainerView withMarginView>
       <ScrollView>
         <Title text="Opciones" />
         <RenderMenu menu={animationMenuItems} />
@@ -23,6 +23,6 @@ export default function HomeScreen() {
         <Separator />
         <RenderMenu menu={uiMenuItems} />
       </ScrollView>
-    </CustomView>
+    </ContainerView>
   );
 }

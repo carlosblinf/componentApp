@@ -9,8 +9,7 @@ import {
 } from "@/presentation/components/ui/menu/itemsData";
 import ContainerView from "@/presentation/components/ui/ContainerView";
 import RenderMenu from "@/presentation/components/ui/menu/RenderMenu";
-
-const Separator = () => <View style={{ marginTop: 30 }} />;
+import { SpaceSeparator } from "@/presentation/components/ui/Separator";
 
 export default function HomeScreen() {
   return (
@@ -18,9 +17,9 @@ export default function HomeScreen() {
       <ScrollView>
         <Title text="Opciones" />
         <RenderMenu menu={animationMenuItems} />
-        <Separator />
+        <SpaceSeparator />
         <RenderMenu menu={menuItems} />
-        <Separator />
+        <SpaceSeparator />
         <RenderMenu menu={uiMenuItems} />
       </ScrollView>
     </ContainerView>

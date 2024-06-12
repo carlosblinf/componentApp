@@ -6,10 +6,9 @@ import { InputScreen } from "../screens/inputs";
 
 import { Ionicons } from "@expo/vector-icons";
 import { SettingScreen } from "../screens/settings";
-import Animation101Screen from "../screens/animations/Animation101Screen";
 import { StatusBar } from "expo-status-bar";
-import Animation102Screen from "../screens/animations/Animation102Screen";
-import SwitchScreen from "../screens/switches/SwitchScreen";
+import { Animation101Screen, Animation102Screen } from "../screens/animations";
+import { SwitchScreen } from "../screens/switches";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();

@@ -1,7 +1,8 @@
-import MenuItem, { MenuItemProps } from "./MenuItem";
+import { MenuItemType } from "./itemsData";
+import MenuItem from "./MenuItem";
 
 type Props = {
-  menu: MenuItemProps[];
+  menu: MenuItemType[];
 };
 export default function RenderMenu({ menu }: Props) {
   return (

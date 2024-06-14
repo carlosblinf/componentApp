@@ -1,6 +1,5 @@
-import { View } from "react-native";
+import { ScrollView } from "react-native";
 import React from "react";
-import { ScrollView } from "react-native-gesture-handler";
 import Title from "@/presentation/components/ui/Title";
 import {
   animationMenuItems,
@@ -13,9 +12,9 @@ import { SpaceSeparator } from "@/presentation/components/ui/Separator";
 
 export default function HomeScreen() {
   return (
-    <ContainerView withMarginView>
+    <ContainerView>
       <ScrollView>
-        <Title text="Opciones" />
+        <Title text="Options" />
         <RenderMenu menu={animationMenuItems} />
         <SpaceSeparator />
         <RenderMenu menu={menuItems} />

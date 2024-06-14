@@ -4,10 +4,10 @@ import { colors } from "@/config/theme/theme";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-export type MenuItemProps = {
+type MenuItemProps = {
   name: string;
   icon: string;
-  component: never;
+  component: string;
   isFirst?: boolean;
   isLast?: boolean;
 };
@@ -21,7 +21,7 @@ export default function MenuItem({
   const navigation = useNavigation();
 
   return (
-    <Pressable onPress={() => navigation.navigate(component)}>
+    <Pressable onPress={() => navigation.navigate(component as never)}>
       <View
         style={{
           ...styles.container,
@@ -39,7 +39,7 @@ export default function MenuItem({
         }}
       >
         <Ionicons
-          name={icon}
+          name={icon as any}
           size={25}
           style={{ marginRight: 10, color: colors.primary }}
         />

@@ -9,6 +9,7 @@ import { SettingScreen } from "../screens/settings";
 import { StatusBar } from "expo-status-bar";
 import { Animation101Screen, Animation102Screen } from "../screens/animations";
 import { SwitchScreen } from "../screens/switches";
+import AlertScreen from "../screens/alerts/AlertScreen";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -25,6 +26,7 @@ function MyStack() {
       <Stack.Screen name="Animation101Screen" component={Animation101Screen} />
       <Stack.Screen name="Animation102Screen" component={Animation102Screen} />
       <Stack.Screen name="SwitchScreen" component={SwitchScreen} />
+      <Stack.Screen name="AlertScreen" component={AlertScreen} />
       <Stack.Screen name="InputScreen" component={InputScreen} />
     </Stack.Navigator>
   );
@@ -42,7 +44,7 @@ function MyTabs() {
         name="Home"
         component={MyStack}
         options={{
-          tabBarLabel: "Inicio",
+          // tabBarLabel: "Inicio",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" size={size} color={color} />
           ),

@@ -1,6 +1,5 @@
 import ContainerView from "@/presentation/components/ui/ContainerView";
 import Card from "@/presentation/components/ui/Card";
-import { Button } from "@/presentation/components/ui/buttons";
 import CustomSwitch from "@/presentation/components/ui/CustomSwitch";
 import { useState } from "react";
 import { LinearSeparator } from "@/presentation/components/ui/Separator";
@@ -12,8 +11,9 @@ export default function SwitchScreen() {
     isHappy: true,
   });
 
+  // TODO: fix handleOnChange to refactor
   const handleOnChange = (value) => setState({ ...state, value });
-  const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
+
   return (
     <ContainerView withMarginView styleInnerView={{ paddingVertical: 10 }}>
       <Card>
@@ -36,7 +36,6 @@ export default function SwitchScreen() {
           isOn={state.isHappy}
           onChange={(value) => setState({ ...state, isHappy: value })}
         />
-        {/* <Button text="Click me" onPress={() => {}} /> */}
       </Card>
     </ContainerView>
   );

@@ -1,4 +1,10 @@
-export const animationMenuItems = [
+export type MenuItemType = {
+    name: string;
+    icon: string;
+    component: string;
+}
+
+export const animationMenuItems: MenuItemType[] = [
   {
     name: "Animation 101",
     icon: "cube-outline",
@@ -10,7 +16,8 @@ export const animationMenuItems = [
     component: "Animation102Screen",
   },
 ];
-export const menuItems = [
+
+export const menuItems: MenuItemType[] = [
   // 01-animationMenuItems
   // 02-menuItems
   {
@@ -46,7 +53,7 @@ export const menuItems = [
 
   // 03- uiMenuItems
 ];
-export const uiMenuItems = [
+export const uiMenuItems: MenuItemType[] = [
   {
     name: "Switches",
     icon: "toggle-outline",

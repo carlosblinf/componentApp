@@ -15,7 +15,7 @@ export default function SwitchScreen() {
   const handleOnChange = (value) => setState({ ...state, value });
 
   return (
-    <ContainerView withMarginView styleInnerView={{ paddingVertical: 10 }}>
+    <ContainerView margin style={{ paddingVertical: 10 }}>
       <Card>
         <CustomSwitch
           text="Is active ??"

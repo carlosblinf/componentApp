@@ -99,7 +99,7 @@ export default function AlertScreen() {
   };
 
   return (
-    <ContainerView withMarginView>
+    <ContainerView margin>
       <Title text="Alerts" />
       <Button text="Alert - 2 Buttons" onPress={createTwoButtonAlert} />
       <SpaceSeparator />

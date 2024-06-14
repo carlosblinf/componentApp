@@ -4,25 +4,23 @@ import { View, StyleProp, ViewStyle } from "react-native";
 
 type ViewProps = {
   style?: StyleProp<ViewStyle>;
-  withMarginView?: boolean;
+  margin?: boolean;
   children: ReactNode;
-  styleInnerView?: StyleProp<ViewStyle>;
 };
 export default function ContainerView({
   style,
   children,
-  styleInnerView,
-  withMarginView = false,
+  margin = false,
 }: ViewProps) {
   return (
-    <View style={[globalStyles.mainContainer, style]}>
-      {withMarginView ? (
-        <View style={[globalStyles.globalMargin, styleInnerView]}>
-          {children}
-        </View>
-      ) : (
-        <>{children}</>
-      )}
+    <View
+      style={[
+        globalStyles.mainContainer,
+        margin ? globalStyles.globalMargin : null,
+        style,
+      ]}
+    >
+      {children}
     </View>
   );
 }

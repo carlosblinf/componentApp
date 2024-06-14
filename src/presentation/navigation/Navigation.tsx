@@ -2,7 +2,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { HomeScreen } from "../screens/home";
-import { InputScreen } from "../screens/inputs";
+import { TextInputScreen } from "../screens/inputs";
 
 import { Ionicons } from "@expo/vector-icons";
 import { SettingScreen } from "../screens/settings";
@@ -27,7 +27,7 @@ function MyStack() {
       <Stack.Screen name="Animation102Screen" component={Animation102Screen} />
       <Stack.Screen name="SwitchScreen" component={SwitchScreen} />
       <Stack.Screen name="AlertScreen" component={AlertScreen} />
-      <Stack.Screen name="InputScreen" component={InputScreen} />
+      <Stack.Screen name="TextInputScreen" component={TextInputScreen} />
     </Stack.Navigator>
   );
 }

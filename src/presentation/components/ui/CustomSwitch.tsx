@@ -1,5 +1,4 @@
 import { colors } from "@/config/theme/theme";
-import { useState } from "react";
 import { View, Text, StyleSheet, Switch, Platform } from "react-native";
 
 type SwitchProps = {

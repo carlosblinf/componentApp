@@ -1,1 +1,1 @@
-export { default as InputScreen } from "./InputScreen";
+export { default as TextInputScreen } from "./TextInputScreen";

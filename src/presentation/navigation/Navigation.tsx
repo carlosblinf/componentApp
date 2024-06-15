@@ -12,6 +12,7 @@ import { SwitchScreen } from "../screens/switches";
 import AlertScreen from "../screens/alerts/AlertScreen";
 import {
   CustomSectionListScreen,
+  InfiniteScrollScreen,
   ModalScreen,
   PullToRefreshScreen,
 } from "../screens/ui";
@@ -40,6 +41,10 @@ function MyStack() {
       />
       <Stack.Screen name="SwitchScreen" component={SwitchScreen} />
       <Stack.Screen name="ModalScreen" component={ModalScreen} />
+      <Stack.Screen
+        name="InfiniteScrollScreen"
+        component={InfiniteScrollScreen}
+      />
       <Stack.Screen name="AlertScreen" component={AlertScreen} />
       <Stack.Screen name="TextInputScreen" component={TextInputScreen} />
     </Stack.Navigator>

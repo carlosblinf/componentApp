@@ -14,7 +14,6 @@ export default function InfiniteScrollScreen() {
       { length: 5 },
       (_, i) => numbers.length + 1 + i,
     );
-    console.log(newNumbers);
     setTimeout(() => {
       setNumbers([...numbers, ...newNumbers]);
     }, 2000);

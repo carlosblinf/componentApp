@@ -16,6 +16,7 @@ import {
   ModalScreen,
   PullToRefreshScreen,
 } from "../screens/ui";
+import { ChangeThemeScreen } from "../screens/theme";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -46,6 +47,7 @@ function MyStack() {
         component={InfiniteScrollScreen}
       />
       <Stack.Screen name="AlertScreen" component={AlertScreen} />
+      <Stack.Screen name="ChangeThemeScreen" component={ChangeThemeScreen} />
       <Stack.Screen name="TextInputScreen" component={TextInputScreen} />
     </Stack.Navigator>
   );

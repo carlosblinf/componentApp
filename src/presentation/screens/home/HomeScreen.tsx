@@ -1,14 +1,14 @@
 import { ScrollView } from "react-native";
 import React from "react";
 import Title from "@/presentation/components/ui/Title";
+import ContainerView from "@/presentation/components/ui/ContainerView";
+import RenderMenu from "@/presentation/components/ui/menu/RenderMenu";
+import { SpaceSeparator } from "@/presentation/components/ui/Separator";
 import {
   animationMenuItems,
   menuItems,
   uiMenuItems,
-} from "@/presentation/components/ui/menu/itemsData";
-import ContainerView from "@/presentation/components/ui/ContainerView";
-import RenderMenu from "@/presentation/components/ui/menu/RenderMenu";
-import { SpaceSeparator } from "@/presentation/components/ui/Separator";
+} from "@/config/data/menuItemsData";
 
 export default function HomeScreen() {
   return (

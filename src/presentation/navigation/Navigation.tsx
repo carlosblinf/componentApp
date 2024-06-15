@@ -10,7 +10,7 @@ import { StatusBar } from "expo-status-bar";
 import { Animation101Screen, Animation102Screen } from "../screens/animations";
 import { SwitchScreen } from "../screens/switches";
 import AlertScreen from "../screens/alerts/AlertScreen";
-import { PullToRefreshScreen } from "../screens/ui";
+import { CustomSectionListScreen, PullToRefreshScreen } from "../screens/ui";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -29,6 +29,10 @@ function MyStack() {
       <Stack.Screen
         name="PullToRefreshScreen"
         component={PullToRefreshScreen}
+      />
+      <Stack.Screen
+        name="CustomSectionListScreen"
+        component={CustomSectionListScreen}
       />
       <Stack.Screen name="SwitchScreen" component={SwitchScreen} />
       <Stack.Screen name="AlertScreen" component={AlertScreen} />
